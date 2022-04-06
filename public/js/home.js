@@ -3,8 +3,12 @@ function createClicked(){
           $.ajax({
             url: "/create",
             type: "POST",
-            data: {identifier:$("#identifier").val(),
-                    name:$("#name").val()
+            data: {name:$("#name").val(),
+                  ingredients:$("#ingredients").val(),
+                  instructions:$("#instructions").val(),
+                  allergies:$("#allergies").prop("checked"),
+                  diet:$("#diet").prop("checked")
+
                   },
             success: function(data){
                 if (data.error)
@@ -16,11 +20,11 @@ function createClicked(){
           });
   return false;
 }
-function readClicked(){
+/*function readClicked(){
           $.ajax({
             url: "/read",
             type: "GET",
-            data: {identifier:$("#identifier").val()},
+            data: {name:$("#name").val()},
             success: function(data){
                 if (data.error)
                   alert("bad");
@@ -32,12 +36,16 @@ function readClicked(){
           });
   return false;
 }
+*/
 function updateClicked(){
           $.ajax({
             url: "/update",
             type: "PUT",
-            data: {identifier:$("#identifier").val(),
-            name:$("#name").val()
+            data: {name:$("#name").val(),
+                  ingredients:$("#ingredients").val(),
+                  instructions:$("#instructions").val(),
+                  allergies:$("#allergies").prop("checked"),
+                  diet:$("#diet").prop("checked")
             },
             success: function(data){
                 if (data.error)
@@ -49,7 +57,7 @@ function updateClicked(){
           });
   return false;
 }
-function deleteClicked(){
+/*function deleteClicked(){
 
     let trimIdentifier = $("#identifier").val().trim();
     if (trimIdentifier == "") {
@@ -70,6 +78,7 @@ function deleteClicked(){
     });
     return false;
 }
+*/
 
 $(document).ready(function(){
 
