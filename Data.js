@@ -1,8 +1,11 @@
 
-let Data = function(id,name) {
-    this.id = id;
+let Data = function(name,image,ingredients,instructions,allergies,diet) {
     this.name = name;
-    name = "steve";
+    this.image = image;
+    this.ingredients = ingredients;
+    this.instructions = instructions;
+    this.allergies = allergies;
+    this.diet = diet;
 }
 
 module.exports = Data;
