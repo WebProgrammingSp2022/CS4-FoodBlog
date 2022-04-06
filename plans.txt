@@ -1,0 +1,10 @@
+Ideas:
+----------Upload recipe--------
+Name
+Image
+Text box- Ingredients (multiply recipe)
+Text box- instructions
+Checkbox allergies - peanut
+diet - Vegan, veggie, high protein
+
+-----------Filter recipe----------
