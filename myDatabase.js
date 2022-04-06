@@ -13,11 +13,16 @@ myDatabase.prototype.displayData = function() {
 }
 
 myDatabase.prototype.postData = function(_data) {
+  for (let i=0;i<this.data.length;i++) {
+    if (this.data[i] && this.data[i].id == _data.id) {
+      return false;
+    }
+  }
   this.data[dataIndex++] =
-  new Data(dataIndex,_data.name,_data.ingredients,_data.instructions,_data.allergies,_data.diet);
+  new Data(_data.id,_data.name,_data.ingredients,_data.instructions,_data.allergies,_data.diet);
   return true;
 }
-
+/*
 myDatabase.prototype.getData = function(id) {
   for (let i=0;i<this.data.length;i++) {
     if (this.data[i] && id == this.data[i].id)
@@ -27,7 +32,8 @@ myDatabase.prototype.getData = function(id) {
   }
   return null;
 }
-
+*/
+/*
 myDatabase.prototype.putData = function(_data) {
   for (let i=0;i<this.data.length;i++) {
     if (this.data[i] && this.data[i].id == _data.id) {
@@ -38,7 +44,8 @@ myDatabase.prototype.putData = function(_data) {
   }
   return false;
 }
-
+*/
+/*
 myDatabase.prototype.deleteData = function(id) {
   for (let i=0;i<this.data.length;i++) {
     if (this.data[i] && id == this.data[i].id) {
@@ -49,5 +56,5 @@ myDatabase.prototype.deleteData = function(id) {
   }
   return null;
 }
-
+*/
 module.exports = myDatabase;
