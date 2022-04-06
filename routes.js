@@ -12,6 +12,7 @@ router.get("/",function(req,res){
     res.sendFile(path.resolve(__dirname + "/public/views/index.html"));  //changed
 });
 
+let index = 0
 
 const myDatabase = require('./myDatabase');
 let db = new myDatabase();
@@ -21,6 +22,9 @@ const Data = require('./Data');
 
 router.post('/create', function(req, res){
 
+    index++
+
+    /*
     let trimIdentifier = req.body.identifier.trim();
     if (trimIdentifier == "") {
         res.json({error:true});
@@ -32,6 +36,9 @@ router.post('/create', function(req, res){
         res.json({error:true});
         return;
     }
+    */
+    let identifier = index
+
 
     let name = req.body.name.trim();
     if (name == "") {
@@ -39,7 +46,7 @@ router.post('/create', function(req, res){
         return;
     }
 
-    let obj = new Data(identifier,name);
+    let obj = new Data(identifier,name, ingredients, instructions,allergies,diet);
     let val = db.postData(obj);
     if (val)
         res.json({error:false});
@@ -48,7 +55,9 @@ router.post('/create', function(req, res){
 
 });
 
+/*
 router.get('/read', function(req, res){
+
     let trimIdentifier = req.query.identifier.trim();
     if (trimIdentifier == "") {
         res.json({error:true});
@@ -123,6 +132,6 @@ router.delete('/delete/:identifier', function(req, res){
         res.json({error:false});
 
 });
-
+*/
 
 module.exports = router;
