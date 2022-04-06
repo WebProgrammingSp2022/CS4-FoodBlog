@@ -10,7 +10,7 @@ diet - Vegan, veggie, high protein
 -----------Filter recipe----------
 
 
-home.html - Nico (remember ID)
+index.html - Nico (remember ID)  Tag EX: <ul id="list"></ul>
 my database - Talia
 routes - Sierra
 home.js - Allison
