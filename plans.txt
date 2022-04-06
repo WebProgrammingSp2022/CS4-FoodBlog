@@ -9,8 +9,15 @@ diet - Vegan, veggie, high protein
 
 -----------Filter recipe----------
 
-
+--------------4/6 - Wednesday----------------
+Tasks for the day:
 index.html - Nico (remember ID)  Tag EX: <ul id="list"></ul>
 my database - Talia
 routes - Sierra
 home.js - Allison
+
+Completed:
+Talia - myDatabase.js basic parameters (post and display), parameters in Data.js
+Allison - added into home.js data values
+Sierra - create in routes.js
+Nico - added HTML, index.js
