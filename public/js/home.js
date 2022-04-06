@@ -14,7 +14,9 @@ function createClicked(){
                 if (data.error)
                   alert("bad");
                 else
-                  alert("good");
+                {
+
+                }
               } ,
             dataType: "json"
           });
@@ -36,7 +38,7 @@ function createClicked(){
           });
   return false;
 }
-*/
+
 function updateClicked(){
           $.ajax({
             url: "/update",
@@ -83,8 +85,8 @@ function updateClicked(){
 $(document).ready(function(){
 
   $("#createButton").click(createClicked);
-  $("#readButton").click(readClicked);
-  $("#updateButton").click(updateClicked);
-  $("#deleteButton").click(deleteClicked);
+//  $("#readButton").click(readClicked);
+//  $("#updateButton").click(updateClicked);
+//  $("#deleteButton").click(deleteClicked);
 
 });
