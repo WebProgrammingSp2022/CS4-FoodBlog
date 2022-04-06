@@ -10,7 +10,7 @@ diet - Vegan, veggie, high protein
 -----------Filter recipe----------
 Hello world~
 
-home.html
-my database
-routes
-home.js
+home.html - Nico
+my database - Talia
+routes - Sierra
+home.js - Allison
