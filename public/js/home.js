@@ -16,13 +16,15 @@ function createClicked(){
                   alert("bad");
                 else
                 {
-                  let li = document.createElement("li");
-                  let ul = document.getElementById("list");
-                  li.innerHTML = "Name:" + $("#name").val() + "\nIngredients:" + $("#ingredients").val();
-                  li.innerHTML += "Instructions:" + $("#instructions").val();
-                  li.innerHTML += "Allergies:" +  $("#allergies").prop("checked");
-                  li.innerHTML += "Diet:" + $("#diet").prop("checked");
-                  ul.appendChild(li);
+
+                  let pa = document.createElement("pa");
+                  let p = document.getElementById("parag");
+                  pa.innerHTML = "Name:" + $("#name").val() + "<br />"+  "Ingredients:" + $("#ingredients").val();
+                  pa.innerHTML += "<br /> Instructions:" + $("#instructions").val();
+                  pa.innerHTML += "<br /> Allergies:" +  $("#allergies").prop("checked");
+                  pa.innerHTML += "<br /> Diet:" + $("#diet").prop("checked");
+                  p.appendChild(pa);
+
                   alert("good");
                 }
               } ,
