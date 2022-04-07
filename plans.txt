@@ -21,3 +21,16 @@ Talia - myDatabase.js basic parameters (post and display), parameters in Data.js
 Allison - added into home.js data values
 Sierra - create in routes.js
 Nico - added HTML, index.js
+
+--------------4/7 - Thursday----------------
+Tasks for the day:
+index.html -
+my database -
+routes -
+home.js - 
+
+Completed:
+Talia -
+Allison -
+Sierra -
+Nico -
