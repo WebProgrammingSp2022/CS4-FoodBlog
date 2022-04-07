@@ -46,7 +46,22 @@ router.post('/create', function(req, res){
         return;
     }
 
-    let obj = new Data(identifier,name, ingredients, instructions,allergies,diet);
+    let ingredients = req.body.ingredients;
+    if (req.body.ingredients.trim() == "") {
+        res.json({error:true});
+        return;
+    }
+
+    let instructions = req.body.instructions;
+    if (req.body.instructions.trim() == "") {
+        res.json({error:true});
+        return;
+    }
+
+    let allergies = req.body.allergies;
+    let diet = req.body.diet;
+
+    let obj = new Data(identifier,name,ingredients,instructions,allergies,diet);
     let val = db.postData(obj);
     if (val)
         res.json({error:false});
