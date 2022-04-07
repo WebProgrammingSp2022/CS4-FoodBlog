@@ -24,10 +24,10 @@ Nico - added HTML, index.js
 
 --------------4/7 - Thursday----------------
 Tasks for the day:
-index.html -
+index.html - Nico
 my database -
 routes -
-home.js - 
+home.js -
 
 Completed:
 Talia -
