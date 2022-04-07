@@ -58,8 +58,8 @@ router.post('/create', function(req, res){
         return;
     }
 
-    let allergies = req.body.allergies.trim();
-    let diet = req.body.diet.trim();
+    let allergies = req.body.allergies;
+    let diet = req.body.diet;
 
     let obj = new Data(identifier,name,ingredients,instructions,allergies,diet);
     let val = db.postData(obj);

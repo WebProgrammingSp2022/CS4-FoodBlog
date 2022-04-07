@@ -15,7 +15,7 @@ function createClicked(){
                   alert("bad");
                 else
                 {
-
+                  alert("good");
                 }
               } ,
             dataType: "json"
