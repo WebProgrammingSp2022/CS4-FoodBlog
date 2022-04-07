@@ -10,12 +10,20 @@ function createClicked(){
                   diet:$("#diet").prop("checked")
 
                   },
+
             success: function(data){
                 if (data.error)
                   alert("bad");
                 else
                 {
-
+                  let li = document.createElement("li");
+                  let ul = document.getElementById("list");
+                  li.innerHTML = "Name:" + $("#name").val() + "\nIngredients:" + $("#ingredients").val();
+                  li.innerHTML += "Instructions:" + $("#instructions").val();
+                  li.innerHTML += "Allergies:" +  $("#allergies").prop("checked");
+                  li.innerHTML += "Diet:" + $("#diet").prop("checked");
+                  ul.appendChild(li);
+                  alert("good");
                 }
               } ,
             dataType: "json"
