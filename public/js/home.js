@@ -1,4 +1,3 @@
-
 function createClicked(){
           $.ajax({
             url: "/create",
@@ -18,11 +17,16 @@ function createClicked(){
                 {
 
                   let pa = document.createElement("pa");
-                  let p = document.getElementById("parag");
+                  let p = document.getElementById("parag");|
                   pa.innerHTML = "Name:" + $("#name").val() + "<br />"+  "Ingredients:" + $("#ingredients").val();
                   pa.innerHTML += "<br /> Instructions:" + $("#instructions").val();
-                  pa.innerHTML += "<br /> Allergies:" +  $("#allergies").prop("checked");
-                  pa.innerHTML += "<br /> Diet:" + $("#diet").prop("checked");
+
+                  var favorite = [];
+                  $.each($("input[name='allergies']:checked"), function(){
+                    favorite.push($(this).val());
+                  });
+                  pa.innerHTML += "<br /> Allergies:" + favorite.join(", ");
+
                   p.appendChild(pa);
 
                   alert("good");
